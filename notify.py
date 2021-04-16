@@ -8,7 +8,7 @@ from bs4 import BeautifulSoup
 import requests as requests
 
 
-def check_availability(zip_codes, date_ranges, radius=50, vac_name="Pfizer"):
+def check_availability(zip_codes, date_ranges, radius=100, vac_name="Pfizer"):
     found = False
 
     for zip_ in zip_codes:
@@ -43,5 +43,5 @@ def check_availability(zip_codes, date_ranges, radius=50, vac_name="Pfizer"):
 
 if __name__ == "__main__":
     zip_codes = ["98005"]
-    date_range = [datetime.date(2021, 4, 27), datetime.date(2021, 4, 30)]
+    date_range = [datetime.date(2021, 4, 17), datetime.date(2021, 4, 18)]
     check_availability(zip_codes, date_range)
